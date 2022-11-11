@@ -1,15 +1,43 @@
 window.addEventListener('DOMContentLoaded', () => {
     
     // Task 1 
+
+    // 1 Variant 
+
     let arrayOfNumbers = []
-    
+
     for (let i = 10; i <= 20; i++) {
         arrayOfNumbers.push(i);
     }
-    
+
     document.getElementById("task-1").innerHTML = arrayOfNumbers
+
+    // 2 Variant
+
+    // let arrayOfNumbers = []
+    // i = 9;
+
+    // do {
+    //     i++
+    //     arrayOfNumbers.push(i);
+    // } while (i<20);
     
+    // document.getElementById("task-1").innerHTML = arrayOfNumbers
+    
+    // 3 Variant
+
+    // let arrayOfNumbers = []
+    // i = 9;
+
+    // while(i<20) {
+    //     i++
+    //     arrayOfNumbers.push(i);
+    // }
+
+    // document.getElementById("task-1").innerHTML = arrayOfNumbers
+
     // Task 2
+
     let arrayOfNumbersSquare = []
     
     for (let i = 10; i <= 20; i++) {
@@ -76,8 +104,9 @@ window.addEventListener('DOMContentLoaded', () => {
     let summForBigNumbers = 0;
     
     for (let i = 100; i <= 200; i++) {
-        
-        if (i%3 === 0) {
+        numberForCubeCheck = 3
+
+        if (i % numberForCubeCheck === 0) {
             summForBigNumbers += i
         }
     }
@@ -88,11 +117,13 @@ window.addEventListener('DOMContentLoaded', () => {
     const userNumber = Number(prompt('Enter your number please'));
 
     if (!userNumber) {
-        document.getElementById("task-9").innerHTML = "You didn't enter a number"
-
-        document.getElementById("task-10").innerHTML = "You didn't enter a number"
-
-        document.getElementById("task-11").innerHTML = "You didn't enter a number"
+        document.getElementById("task-9").innerHTML = "You didn't enter a number or entered 0";
+        document.getElementById("task-10").innerHTML = "You didn't enter a number or entered 0";
+        document.getElementById("task-11").innerHTML = "You didn't enter a number or entered 0";
+    } else if (userNumber < 0) {
+        document.getElementById("task-9").innerHTML = "Your number less than 0";
+        document.getElementById("task-10").innerHTML = "Your number less than 0";
+        document.getElementById("task-11").innerHTML = "Your number less than 0";
     } else {
         // Task 9
         let dividerArray = []
@@ -111,8 +142,9 @@ window.addEventListener('DOMContentLoaded', () => {
         let summOfEventDividers = 0
 
         for (let i = userNumber; i >= 2; i--) {
+            numberForSquareCheck = 2
             
-            if (i%2 === 0 && userNumber%2 === 0) {
+            if (i % numberForSquareCheck === 0 && userNumber % numberForSquareCheck === 0) {
                 evenDividerArray.push(i)
                 summOfEventDividers += i
             }
